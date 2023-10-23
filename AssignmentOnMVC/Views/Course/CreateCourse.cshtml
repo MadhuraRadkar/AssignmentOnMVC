@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Create Course";
+}
+@using (Html.BeginForm())
+{
+    <table class="table-bordered">
+        <tr>
+            <td>
+                Enter your name
+            </td>
+            <td>
+                @Html.TextBox("name")
+            </td>
+        </tr>
+        <tr>
+            <td>Select Gender</td>
+            <td>
+                @Html.RadioButton("gender","Male") Male
+                @Html.RadioButton("gender","Female") Female
+            </td>
+        </tr>
+        <tr>
+            <td>Course Interested?</td>
+            <td>
+               <input type="checkbox" name="CourseInterested" value="C#" /> C#
+                <input type="checkbox" name="CourseInterested" value="Java" /> Java
+                <input type="checkbox" name="CourseInterested" value="Angular" /> Angular
+                <input type="checkbox" name="CourseInterested" value="React" /> React
+                <input type="checkbox" name="CourseInterested" value="Software Testing" /> Software Testing
+
+            </td>
+        </tr>
+        <tr>
+            <td>Would you like to know more details about the course?</td>
+            <td>
+                @Html.DropDownList("option")
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+
+            <td>
+                <input type="submit" value="Add" />
+            </td>
+        </tr>
+        
+    </table>
+}
